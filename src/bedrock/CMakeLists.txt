@@ -16,12 +16,7 @@ list(
     "${CMAKE_CURRENT_SOURCE_DIR}/BedrockFile.hpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/BedrockFile.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/BedrockPath.hpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/BedrockPath.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/BedrockMath.hpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/BedrockMath.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/BedrockCommon.hpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/BedrockRotation.hpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/BedrockRotation.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/BedrockString.hpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/BedrockString.cpp"
 )
