@@ -58,7 +58,7 @@ if(LINUX)
     set(THREADS_PREFER_PTHREAD_FLAG ON)
 endif()
 
-###############################################################
+#### OpenMP #############################################
 
 find_package(OpenMP REQUIRED)
 set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
@@ -66,13 +66,22 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
 set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
 link_libraries(OpenMP::OpenMP_CXX)
 
+### glm ####################################################
+
+add_definitions(-DGLM_FORCE_SILENT_WARNINGS)
+add_definitions(-DGLM_FORCE_DEPTH_ZERO_TO_ONE)
+add_definitions(-DGLM_FORCE_SWIZZLE)
+add_definitions(-DGLM_FORCE_LEFT_HANDED)
+add_subdirectory("${CMAKE_SOURCE_DIR}/libs/glm/glm")
+include_directories("${CMAKE_SOURCE_DIR}/libs/glm/glm")
+
 ### Bedrock ################################################
 
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/bedrock")
 include_directories("${CMAKE_SOURCE_DIR}/src/bedrock")
 link_libraries(Bedrock)
 
-### JobSystem ###################################################
+### JobSystem ##############################################
 
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/job_system")
 include_directories("${CMAKE_SOURCE_DIR}/src/job_system")
