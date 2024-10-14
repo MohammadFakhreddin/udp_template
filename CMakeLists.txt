@@ -72,12 +72,6 @@ add_subdirectory("${CMAKE_SOURCE_DIR}/src/bedrock")
 include_directories("${CMAKE_SOURCE_DIR}/src/bedrock")
 link_libraries(Bedrock)
 
-### Time ###################################################
-
-add_subdirectory("${CMAKE_SOURCE_DIR}/src/time_system")
-include_directories("${CMAKE_SOURCE_DIR}/src/time_system")
-link_libraries(TimeSystem)
-
 ### JobSystem ###################################################
 
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/job_system")
